@@ -147,61 +147,38 @@ If $\vec{A}$ =$\myvec{1&2&3\\3&-2&1\\4&2&1}$, then show that \\$\vec{A}^3-23\vec
 \section{Solution}
 Given that $\vec{A}$ =$\myvec{1&2&3\\3&-2&1\\4&2&1}$.
 \begin{enumerate}
-\item Calculating $\vec{A}^3$ :
-\begin{itemize}
-\item We will firstly calculate $\vec{A}^2$ :-
+\item \textbf{The Characteristic equation} is given by:
 \begin{align}
-\vec{A}^2&= \myvec{1&2&3\\3&-2&1\\4&2&1}\myvec{1&2&3\\3&-2&1\\4&2&1}
-\\
-&=\myvec{1+6+12&2-4+6&3+2+3\\3-6+4&6+4+2&9-2+1\\4+6+4&8-4+2&12+2+1}
-\\
-&\implies\vec{A}^2= \myvec{19&4&8\\1&12&8\\14&6&15}
-\end{align}
-\item Now, $\vec{A}^3$ can be given as :-
-\begin{align}
- \vec{A}^3&=\vec{A}^2\vec{A}
- \\
- \vec{A}^3&=\myvec{19&4&8\\1&12&8\\14&6&15}\myvec{1&2&3\\3&-2&1\\4&2&1}
- \end{align}
- \begin{align}
- &=\myvec{19+12+32&38-8+16&57+4+8\\1+36+32&2-24+16&3+12+8\\14+18+60&28-12+30&42+6+15}
- \\
- &\implies \vec{A}^3=\myvec{63&46&69\\69&-6&23\\92&46&63}\label{eq:A3} 
-\end{align}
-\end{itemize}
-\item Calculating 23$\vec{A}$ :-
-\begin{align}
- 23\vec{A}&=23\myvec{1&2&3\\3&-2&1\\4&2&1}
- \\
-\implies 23\vec{A}&=\myvec{23&46&69\\69&-46&23\\92&46&23}\label{eq:23A}
-\end{align}
-\item Calculating 40$\vec{I}$ :-
-\begin{align}
- 40\vec{I}&=40\myvec{1&0&0\\0&1&0\\0&0&1}
- \\
- \implies 40\vec{I}&=\myvec{40&0&0\\0&40&0\\0&0&40}\label{eq:40I}
-\end{align}
- \item Considering LHS of given equation we have:-
- \begin{align}
- LHS=\vec{A}^3-23\vec{A}-40\vec{I}   
- \end{align}
- \item Putting values from \eqref{eq:A3}, \eqref{eq:23A}
-and \eqref{eq:40I} we get:-
+    \abs{\vec{A}-\lambda\vec{I}}&=0
+    \\
+    \implies det\myvec{1-\lambda&2&3\\3&-2-\lambda&1\\4&2&1-\lambda}&=0
+    \end{align}
 \begin{multline}
-\implies \text{LHS}=\myvec{63&46&69\\69&-6&23\\92&46&63}-
-\myvec{23&46&69\\69&-46&23\\92&46&23}
-\\-\myvec{40&0&0\\0&40&0\\0&0&40}
+   \implies\brak{1-\lambda}\brak{\brak{-2-\lambda}\brak{1-\lambda}-2}
+   \\
+   -2\brak{3\brak{1-\lambda}-4}+3\brak{6+4\brak{2+\lambda}}=0
+\end{multline}
+\begin{multline}
+   \implies\brak{1-\lambda}\brak{\lambda+\lambda^2-4}
+   \\
+   -2\brak{-1-3\lambda}+3\brak{14+4\lambda}=0
+\end{multline}
+\begin{multline}
+   \implies-\lambda^3+5\lambda-4
+   \\
+   +2+6\lambda+42+12\lambda=0
 \end{multline}
 \begin{align}
-=\myvec{63-23-40&46-46&69-69\\69-69&-6+46-40&23-23\\92-92&46-46&63-23-40}
+ \implies   \lambda^3-23\lambda-40=0
 \end{align}
+The above equation is similar to equation to be proved.
+\item According to \textbf{Cayley-Hamilton Theorem:} 
+\\
+Every square matrix satisfies its own
+\\\textbf{characteristic equation}.
 \begin{align}
-&\implies \text{LHS}=\myvec{0&0&0\\0&0&0\\0&0&0}
-\\
-&\implies \text{LHS}=0=RHS
-\\
-&\implies \vec{A}^3-23\vec{A}-40\vec{I}=0
+\therefore    \vec{A}^3-23\vec{A}-40\vec{I}=0
 \end{align}
-Hence, proved.
+Hence Proved.
 \end{enumerate}
 \end{document}
