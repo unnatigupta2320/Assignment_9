@@ -149,24 +149,14 @@ Given that $\vec{A}$ =$\myvec{1&2&3\\3&-2&1\\4&2&1}$.
 \begin{enumerate}
 \item \textbf{The Characteristic equation} is given by:
 \begin{align}
-    \abs{\vec{A}-\lambda\vec{I}}&=0
+  \implies  \abs{\vec{A}-\lambda\vec{I}}&=0
     \\
-    \implies det\myvec{1-\lambda&2&3\\3&-2-\lambda&1\\4&2&1-\lambda}&=0
+    \implies \mymacro\mydet{1-\lambda&2&3\\3&-2-\lambda&1\\4&2&1-\lambda}&=0
     \end{align}
 \begin{multline}
    \implies\brak{1-\lambda}\brak{\brak{-2-\lambda}\brak{1-\lambda}-2}
    \\
    -2\brak{3\brak{1-\lambda}-4}+3\brak{6+4\brak{2+\lambda}}=0
-\end{multline}
-\begin{multline}
-   \implies\brak{1-\lambda}\brak{\lambda+\lambda^2-4}
-   \\
-   -2\brak{-1-3\lambda}+3\brak{14+4\lambda}=0
-\end{multline}
-\begin{multline}
-   \implies-\lambda^3+5\lambda-4
-   \\
-   +2+6\lambda+42+12\lambda=0
 \end{multline}
 \begin{align}
  \implies   \lambda^3-23\lambda-40=0
@@ -182,3 +172,4 @@ Every square matrix satisfies its own
 Hence Proved.
 \end{enumerate}
 \end{document}
+
